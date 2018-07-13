@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Đăng Ký</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="../HTML/HTML/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="SigIn.css">
+    <script type="text/javascript">
+    	function validateForm()
+{   
+    //Khai báo
+        var user,email,sdt,password;
+        user = document.getElementById('txtuser').value;
+        email = document.getElementById('txtemail').value;
+        sdt = document.getElementById('txtmobie').value;
+        password = document.getElementById('txtpassword').value;
+    // kiểm tra
+        if(user===""){
+            document.getElementById('msg_user').innerHTML = "Họ tên không được để trống!";
+            document.getElementById('txtuser').setAttribute('style','border:1px solid red;');
+        }else{
+            document.getElementById('msg_user').innerHTML = "";
+            document.getElementById('txtuser').setAttribute('style','border:1px solid #ccc;');
+        }
+        if(email === ""){
+                    document.getElementById('msg_email').innerHTML = "Email không được để trống";
+                    document.getElementById('txtemail').setAttribute('style','border:1px solid red;');
+                }else{
+                    document.getElementById('msg_email').innerHTML = "";
+                    document.getElementById('txtemail').setAttribute('style','border:1px solid #ccc;');
+                    var pattern = /^[A-Za-z0-9\_\.\-]+@[A-Za-z0-9]+\.[A-Za-z0-9]{2,4}$/g;
+                    
+                   if(pattern.test(email)===false){
+                       document.getElementById('msg_email').innerHTML = "Sai định dạng Email";
+                   } else{
+                       document.getElementById('msg_email').innerHTML = "";
+                       document.getElementById('txtemail').setAttribute('style','border:1px solid #ccc;');
+                   }
+                }
+        if(sdt===""){
+                    document.getElementById('msg_mobie').innerHTML = "SDT không được để trống";
+                    document.getElementById('txtmobie').setAttribute('style','border:1px solid red;');
+                }else{
+                    document.getElementById('msg_mobie').innerHTML = "";
+                    document.getElementById('txtmobie').setAttribute('style','border:1px solid #ccc;');
+                    var pattern = /^0[0-9]{9,10}$/g;
+                    
+                   if(pattern.test(email)===false){
+                       document.getElementById('msg_mobie').innerHTML = "Sai định dạng Phone";
+                   } else{
+                       document.getElementById('msg_mobie').innerHTML = "";
+                       document.getElementById('txtmobie').setAttribute('style','border:1px solid #ccc;');
+                   }
+                }
+        if(password===""){
+            document.getElementById('msg_password').innerHTML = "password không được để trống!";
+            document.getElementById('txtpassword').setAttribute('style','border:1px solid red;');
+        }else{
+            document.getElementById('msg_password').innerHTML = "";
+            document.getElementById('txtpassword').setAttribute('style','border:1px solid #ccc;');
+        }
+ }
+    </script>
+</head>
+<body>
+	<div id="wrapper">
+		<!-- <div class="container-fluid"> -->
+			<div id="top_link">
+				<div class="container">
+					<p id="phone">Hotline:01632155830</p>
+				</div>
+			</div>
+			<div id="header">
+				<div class ="container">
+					<div class="row">
+						<div class="col-md-3">
+							<a href="file:///C:/Users/Administrator/Desktop/Php40/BOOTSTRAP/Shop_dt/index.html"><img src="IMG/logo_home.png" id="logo"></a>
+						</div>
+						<div class="col-md-6">
+							<form class="navbar-form navbar-left" action="#">
+								 <div class="form-group">
+									 <input type="text" class="form-control" id="search" placeholder="Search" name="search">
+								 </div>
+								 <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search"></span></button>
+							</form>
+						</div>
+						<div class="col-md-3">	
+							<div class="col-md-4 col-md-offset-4"><a class="navbar-brand navbar-right" href="file:///C:/Users/Administrator/Desktop/Php40/BOOTSTRAP/Shop_dt/SigIn.html"><i class="fas fa-user"></i></a></div>
+							<div class="col-md-4 "><a class="navbar-brand navbar-right" href="#"><i class="fas fa-bell" style="color: white"></i></a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="sub_menu">
+				<div class="container">
+						<nav class="navbar navbar"> 
+						    <ul class="nav navbar-nav">
+						      <li class="active"><a href="#"><i class="fas fa-home"></i></a></li>
+						      <li><a href="#">ĐIỆN THOẠI</a></li>
+						      <li><a href="#">LAPTOP</a></li>
+						      <li><a href="#">APPLE</a></li>
+						      <li><a href="#">TAPBLET</a></li>
+						      <li><a href="#">PHỤ KIỆN</a></li>
+						      <li><a href="#">SIM THẺ</a></li>
+						      <li><a href="#">ĐỔI TRẢ</a></li>
+						      <li><a href="#">KHUYẾN MÃI</a></li>
+						    </ul>
+						    <a class="navbar-brand navbar-right" href="#"><i class="fas fa-cart-plus"></i></a>
+						</nav>
+				</div>
+			</div>
+			<div id="content">
+				<div class="container">
+					<form action="#		" method="post" >
+                        <h2>ĐĂNG KÝ </h2>
+                        <label>Họ tên:</label>
+                        <input type="text" name="txt_username" id="txtuser" value="" placeholder="   Nhập họ tên..."><span class="msg" id="msg_user"></span>  <br /><br>
+                        <label>Email:</label>
+                        <input type="text" name="txt_email" id="txtemail" value="" placeholder="   Nhập Email..."> <span class="msg" id="msg_email"></span> <br /><br>
+                        <label>SĐT:</label>
+                        <input type="text" name="txt_mobie" id="txtmobie" value="" placeholder="   Nhập SĐT..."> <span class="msg" id="msg_mobie"></span> <br /><br>
+                        <label>Mật khẩu</label>
+                        <input type="password" name="txt_password" id="txtpassword" value="" placeholder="  Nhập mật khẩu..."><span class="msg" id="msg_password"></span> <br /><br>
+                        <br />
+                        <input type="button" value="Đăng ký" name="SigIn" onclick="validateForm()">
+                        <input type="reset" value="Hủy" name="reset">
+                    </form>
+				</div>
+			</div>
+			<div id="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4" id="footer_gt">
+							<h4>Thông tin công ty</h6>
+							<a href="#"><p>Giới thiệu công ty</p></a>
+							<a href="#"><p>Tiêu chí bán hàng</p></a>
+							<a href="#"><p>Đối tác chiến lược</p></a>
+							<a href="#"><p>Tuyển dụng</p></a>
+						</div>
+						<div class="col-md-4">
+							<h4>HỖ TRỢ</h5>
+							<p>Hotline:01632155830</p>
+							<p>Email: nguyentienloi160997@gmail.com</p>
+							<a href="#"><i class="fab fa-facebook-square" style="font-size: 30px;"></i></a>
+							<a href="#"><i class="fab fa-google-plus-square" style="font-size: 30px;"></i></a>
+							<a href="#"><i class="fab fa-instagram" style="font-size: 30px;"></i></a>
+							<a href="#"><i class="fab fa-twitter-square" style="font-size: 30px;"></i></a>
+							<p style="padding-top: 5px; font-size: 16px;"><img src="IMG/location.png">55 Chính Kinh-Thanh Xuân Hà Nội</p>
+						</div>
+						<div class="col-md-4">
+							<h4>Hỗ trợ thanh toán</h5>
+							<img src="IMG/tt.png">
+							<h4>Chứng nhận</h5>
+							<img src="IMG/dk.png">
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- </div> -->
+	</div>
+</body>
+</html>

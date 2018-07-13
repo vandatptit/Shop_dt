@@ -1,0 +1,102 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	font-family: tahoma;
+	font-size: 13px;
+}
+a{
+	text-decoration:none;
+}
+li{
+	float: left;
+	list-style: none;
+}
+#header{
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+#search{
+	width: 400px;
+}
+#sub_menu{
+	background: #e2e0e0;
+	height: 51px;
+}
+#logo{
+	width: 160px;
+	height: 55px;
+}
+#phone{
+	float: right;
+}
+#top_link{
+	background: #ccc;
+	height: 17px;
+}
+#footer{
+	background-image: url("IMG/bg-footer.jpg") ;
+	background-repeat: repeat;
+}
+	/*content*/
+	div#content form{
+                    width: 600px;
+                    height: 360px;
+                    margin: 100px auto;
+                    border: 1px solid blue;
+                    border-radius: 5px;
+                }
+                div#content form h2{
+                    color: #0cc5ef;
+                    font-size: 26px;
+                    padding: 12px;
+                    text-align: center;
+                    padding-bottom: 20px;
+                }
+                div#content form label{
+                    padding-right: 50px;
+                    margin-left: 20px;
+                }
+                div#content form input[type="text"], input[type="password"]{
+                    width: 250px;
+                    height: 25px;
+                    border-radius: 5px;
+                    border :1px solid #ccc;
+                    
+                }
+                div#content form input[type="button"], input[type="reset"]{
+                    padding: 4px;
+                }
+                input[type="reset"]{
+                    border:1px solid #ccc;
+                    border-radius: 5px;
+                }
+                div#content form input[type="button"]{
+                    margin-left: 245px;
+                    border:1px solid #ccc;
+                    border-radius: 5px;
+                }
+                 div#content form input[type="button"]:hover{
+                    background: #2dd5f1;
+                    color: white;
+                    border: 1px solid #157eea;
+                 }
+                 div#content form input[type="reset"]:hover{
+                    background: #2dd5f1;
+                    color: white;
+                    border: 1px solid #157eea;
+                 }
+                #txtemail{
+                    margin-left: 7px;
+                }
+                #txtmobie{
+                    margin-left: 14px;
+                }
+                #txtpassword{
+                    margin-left: -11px;
+                }
+                .msg{
+                    color: red;
+                    margin-left: 10px;
+                }
